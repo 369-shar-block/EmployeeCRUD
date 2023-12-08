@@ -27,11 +27,3 @@ The microservice follows a clean architecture with separation of concerns among 
 - `PUT /Employees/{id}`: Update an existing employee.
 - `DELETE /Employees/{id}`: Delete an employee.
 
-## Testing
-Outline the test cases for each API endpoint in the `tests` folder.
-
-## Contribution
-Feel free to submit issues and enhancement requests.
-
-## License
-[MIT License](LICENSE)
