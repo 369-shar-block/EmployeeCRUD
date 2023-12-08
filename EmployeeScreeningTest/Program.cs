@@ -11,10 +11,9 @@ using Microsoft.Extensions.Caching.Distributed;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add configuration sources (appsettings.json, appsettings.Development.json, etc.).
 builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
 
-// Add Azure Key Vault using the new method
+// Add Azure Key Vault 
 var keyVaultUrl = new Uri($"https://{builder.Configuration["KeyVaultName"]}.vault.azure.net/");
 builder.Configuration.AddAzureKeyVault(keyVaultUrl, new DefaultAzureCredential());
 
