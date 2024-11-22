@@ -1,7 +1,8 @@
 # Employee Management Microservice
 
 ## Overview
-This repository contains a microservice for managing employee data, designed to handle CRUD operations for a large number of employee entities. The service utilizes Azure Cosmos DB for data storage and Redis Cache for high-performance read operations.
+This repository contains a scalable microservice for managing employee data. It is designed to efficiently handle CRUD (Create, Read, Update, Delete) operations for a large volume of employee records. The service ensures security by leveraging Azure Key Vault for managing sensitive configurations like connection strings and database credentials. Additionally, it integrates with Azure Cosmos DB for reliable data storage and Redis Cache for high-performance read operations.
+
 
 ## Features
 - RESTful API for CRUD operations on employee entities.
@@ -18,9 +19,12 @@ This repository contains a microservice for managing employee data, designed to 
 5. Build and run the application.
 
 ## Architecture
-The microservice follows a clean architecture with separation of concerns among Controllers, Services, and Repositories.
+The application is designed with a clean architecture, ensuring modularity, testability, and scalability:
 
-Architecture diagram can be found in the "Documentation" folder as a pdf. Feel free to download it to get a clear view. 
+Controllers: Handle incoming HTTP requests and route them to the appropriate services.
+Services: Contain business logic and coordinate operations between controllers and repositories.
+Repositories: Interact directly with Azure Cosmos DB and Redis Cache to perform data operations.
+A detailed architecture diagram can be found in the Documentation folder as a PDF.
 
 ## Endpoints
 - `GET /Employees/{id}`: Retrieve an employee by ID.
