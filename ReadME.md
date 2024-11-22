@@ -14,7 +14,7 @@ This repository contains a microservice for managing employee data, designed to 
 3. Set up Azure Cosmos DB and Redis Cache in Azure. 
 4. Set up the key vault in Azure and enter your secrets there (you need connection strings, database name and container name)
 4. Update `appsettings.json` with your Azure Key Vault name. 
-5. Update program.cs. You will need to make sure you are using your own names for connection strings. So lines 26, 32, 39 and 40 will need to be changed. 
+5. Ensure that sensitive information such as connection strings, database names, and container names are stored in Azure Key Vault.
 5. Build and run the application.
 
 ## Architecture
